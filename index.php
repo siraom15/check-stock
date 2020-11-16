@@ -1,0 +1,13 @@
+<?php 
+  session_start();
+  if(isset($_SESSION['stauts'])){
+    if($_SESSION['status']==1){
+      header('location:user.php');
+    }
+    else{
+      header('location:login.php');
+    }
+  }else{
+    header('location:login.php');
+  }
+?>
